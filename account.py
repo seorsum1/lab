@@ -29,7 +29,7 @@ class Account:
         :param amount: Integer or float to subtract to account balance, must be positive above zero and greater than current balance.
         :return: True if withdraw transaction is successful, False otherwise.
         """
-        if amount > 0 and self.__account_balance >= amount:
+        if 0 < amount <= self.__account_balance:
             self.__account_balance -= amount
             return True
         else:
